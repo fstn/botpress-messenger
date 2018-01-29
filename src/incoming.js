@@ -159,7 +159,7 @@ module.exports = (bp, messenger) => {
     })
   })
 
-  messenger.on('account_linking', () => {
+  messenger.on('account_linking', e => {
       preprocessEvent(e)
         .then(profile => {
           bp.middlewares.sendIncoming({
