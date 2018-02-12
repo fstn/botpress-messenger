@@ -48,7 +48,9 @@ const webConfig = {
   },
   externals: {
     'react': 'React',
-    'react-dom': 'ReactDOM'
+    'react-dom': 'ReactDOM',
+    'react-bootstrap': 'ReactBootstrap',
+    'prop-types': 'PropTypes'
   },
   resolve: {
     extensions: ['.js', '.jsx']
