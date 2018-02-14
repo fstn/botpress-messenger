@@ -33,6 +33,8 @@ module.exports = (bp, messenger) => {
   messenger.on('message', e => {
     preprocessEvent(e)
     .then(profile => {
+        bp.logger.debug('Incoming message')
+        bp.logger.debug(e)
       // push the message to the incoming middleware
       bp.middlewares.sendIncoming({
         platform: 'facebook',
