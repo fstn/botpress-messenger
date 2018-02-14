@@ -49,6 +49,8 @@ module.exports = (bp, messenger) => {
   messenger.on('attachment', e => {
     preprocessEvent(e)
     .then(profile => {
+        bp.logger.debug('Incoming attachment')
+        bp.logger.debug(e)
       bp.middlewares.sendIncoming({
         platform: 'facebook',
         type: 'attachments',
@@ -73,6 +75,8 @@ module.exports = (bp, messenger) => {
   messenger.on('postback', e => {
     preprocessEvent(e)
     .then(profile => {
+        bp.logger.debug('Incoming postback')
+        bp.logger.debug(e)
       bp.middlewares.sendIncoming({
         platform: 'facebook',
         type: 'postback',
@@ -104,6 +108,8 @@ module.exports = (bp, messenger) => {
   messenger.on('quick_reply', e => {
     preprocessEvent(e)
     .then(profile => {
+        bp.logger.debug('Incoming quick_reply')
+        bp.logger.debug(e)
       bp.middlewares.sendIncoming({
         platform: 'facebook',
         type: 'quick_reply',
@@ -192,6 +198,8 @@ module.exports = (bp, messenger) => {
   messenger.on('referral', e => {
     preprocessEvent(e)
     .then(profile => {
+        bp.logger.debug('Incoming referral')
+        bp.logger.debug(e)
       bp.middlewares.sendIncoming({
         platform: 'facebook',
         type: 'referral',
