@@ -368,7 +368,7 @@ class Messenger extends EventEmitter {
     }
 
     setPersistentMenu(buttons, composerInputDisabled) {
-        if (!this.config.persistentMenuSkipUpdate) {
+        if (!this.config.externalPersistentMenu) {
             const formattedButtons = this._formatButtons(buttons)
             return this.sendRequest({
                 persistent_menu: [

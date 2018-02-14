@@ -103,7 +103,7 @@ export default class MessengerModule extends React.Component {
       'greetingMessage',
       'hostname',
       'persistentMenu',
-      'persistentMenuSkipUpdate',
+      'externalPersistentMenu',
       'persistentMenuItems',
       'targetAudience',
       'targetAudienceOpenToSome',
@@ -746,9 +746,9 @@ export default class MessengerModule extends React.Component {
             {this.renderCheckBox('Display Get Started', 'displayGetStarted', this.state.homepage+'#display-get-started')}
             {this.state.displayGetStarted && this.renderGetStartedMessage()}
             {this.renderTextAreaInput('Greeting text', 'greetingMessage', this.state.homepage+'#greeting-message')}
-            {this.renderCheckBox('Persistent menu', 'persistentMenu', this.state.homepage+'#persistent-menu')}
-            {this.renderCheckBox('Persistent menu skip update', 'persistentMenuSkipUpdate', this.state.homepage+'#persistent-menu')}
-            {this.state.persistentMenu && this.renderPersistentMenuList()}
+            {this.renderCheckBox('Use an external Persistent menu configuration', 'externalPersistentMenu', this.state.homepage+'#persistent-menu')}
+            {!this.state.externalPersistentMenu && this.renderCheckBox('Persistent menu', 'persistentMenu', this.state.homepage+'#persistent-menu')}
+            {!this.state.externalPersistentMenu && this.state.persistentMenu && this.renderPersistentMenuList()}
             {this.renderCheckBox('Automatically mark as read', 'automaticallyMarkAsRead', this.state.homepage+'#automatically-mark-as-read')}
             {this.renderCheckBox('Composer input disabled', 'composerInputDisabled', this.state.homepage+'#composer-input-disabled')}
             {this.renderFacebookPageDetails()}

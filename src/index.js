@@ -124,7 +124,7 @@ module.exports = {
         displayGetStarted: {type: 'bool', required: false, default: true},
         greetingMessage: {type: 'string', required: false, default: 'Default greeting message'},
         persistentMenu: {type: 'bool', required: false, default: false},
-        persistentMenuSkipUpdate: {type: 'bool', required: false, default: false},
+        externalPersistentMenu: {type: 'bool', required: false, default: false},
         persistentMenuItems: {type: 'any', required: false, default: [], validation: v => _.isArray(v)},
         composerInputDisabled: {type: 'bool', required: false, default: false},
         automaticallyMarkAsRead: {type: 'bool', required: false, default: true},
