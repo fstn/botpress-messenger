@@ -19,6 +19,8 @@ module.exports = (bp, messenger) => {
 
     if (mid && !messagesCache.has(mid)) {
       // We already processed this message
+        bp.logger.debug('Ignoring already  processed message')
+        bp.logger.debug(payload)
       payload.alreadyProcessed = true
     } else {
       // Mark it as processed

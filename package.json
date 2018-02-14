@@ -1,9 +1,9 @@
 {
-  "name": "botpress-messenger",
+  "name": "botpress-advanced-messenger",
   "version": "2.2.9",
-  "description": "Official Facebook Messenger connector for botpress",
+  "description": "Unofficial Facebook Messenger connector for botpress",
   "main": "bin/node.bundle.js",
-  "homepage": "https://github.com/botpress/botpress-messenger",
+  "homepage": "https://github.com/fstn/botpress-messenger",
   "botpress": {
     "menuText": "Messenger",
     "menuIcon": "custom",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/botpress/botpress-messenger"
+    "url": "https://github.com/fstn/botpress-messenger"
   },
   "author": "Botpress",
   "license": "AGPL-3.0",
